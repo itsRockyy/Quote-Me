@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  background-color: black;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-container {
+  flex: 1 0 auto;
+  padding: 20px;
+}
+
+.quoteText {
+  background-color: white;
+  width: 75vw;
+  margin-top: 30vh;
+  padding: 1rem;
+}
+
+footer {
+  padding: 0.2rem;
+  background-color: white;
+  text-align: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+li {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+#buttonText {
+  justify-content: center;
+}
+
+a {
+  color: inherit;
+}
+.md-chip:hover {
+  cursor: pointer;
+}
+
+#getQuote {
+  float: right;
+}
+
+.md-chip {
+  display: inline-block;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  margin: 0 5px 3px 0;
+  line-height: 2rem;
+  color: white;
+}
+
+#quote {
+  font-size: 2rem;
+}
