@@ -1,4 +1,4 @@
-let colorPallete = [
+const colorPallete = [
   "#16a085",
   "#27ae60",
   "#2c3e50",
@@ -10,26 +10,13 @@ let colorPallete = [
   "#472E32",
   "#BDBB99",
   "#77B1A9",
-  "#73A857"
+  "#73A857",
 ];
 
-var httpHeaders = {
-  "X-Mashape-Key": "3ssNrLwQaHmshdrfDEyfjHezXQ7mp1U8sBYjsna3g8jeRSTOW3"
-};
-
-var request = new Request(
-  "https://andruxnet-random-famous-quotes.p.mashape.com/",
-  {
-    headers: new Headers({
-      "X-Mashape-Key": "3ssNrLwQaHmshdrfDEyfjHezXQ7mp1U8sBYjsna3g8jeRSTOW3"
-    })
-  }
-);
-
-function getQuote() {
-  fetch(request)
-    .then(response => response.json())
-    .then(json => {
+const getQuote = () => {
+  fetch("https://itsrockyy.herokuapp.com/api/quote-me")
+    .then((response) => response.json())
+    .then((json) => {
       let color = colorPallete[Math.floor(12 * Math.random())];
       document.getElementById(
         "quote"
@@ -43,7 +30,7 @@ function getQuote() {
       document.body.style.color = color;
       document.body.style.backgroundColor = color;
     })
-    .catch(error => console.log(error));
-}
+    .catch((error) => console.log(error));
+};
 
 getQuote();
