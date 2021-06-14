@@ -14,7 +14,7 @@ const colorPallete = [
 ];
 
 const getQuote = () => {
-  fetch("https://itsrockyy.herokuapp.com/api/quote-me")
+  fetch("https://itsrockyy-api.netlify.app/quote-me")
     .then((response) => response.json())
     .then((json) => {
       let color = colorPallete[Math.floor(12 * Math.random())];
